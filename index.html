@@ -7,27 +7,38 @@
 	<title>Task List 2021</title>
 
 	<link rel="stylesheet" href="main.css" />
+
+								<!-- supabase link -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
 <body>
-	
 	<header>
-		<h1>Task List 2021</h1>
+		<h1>Todo App</h1>
 		<form id="new-task-form">
 			<input 
 				type="text" 
 				name="new-task-input" 
 				id="new-task-input" 
-				placeholder="What do you have planned?" />
+				placeholder="C'est quoi votre planing ?" />
+			<input 
+			class="new-task-input-date"
+				type="datetime-local" 
+				name="new-task-input" />
+				<!-- <label for="">dsdsdd</label> -->
+			<select id="cars" class = "new-task-input-level">
+				<option value="audi">Faible</option>
+				<option value="volvo">Moyenne</option>
+				<option value="opel">Haute</option>
+				</select>
 			<input 
 				type="submit"
 				id="new-task-submit" 
-				value="Add task" />
+				value="Ajouter" />
 		</form>
 	</header>
 	<main>
 		<section class="task-list">
-			<h2>Tasks</h2>
-
+			<h2 onclick="myFunction()">Tâches</h2>
 			<div id="tasks">
 
 				<!-- <div class="task">
@@ -43,11 +54,10 @@
 						<button class="delete">Delete</button>
 					</div>
 				</div> -->
-
 			</div>
 		</section>
 	</main>
-
-	<script src="main.js"></script>
+  <script src="supBase.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
