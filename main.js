@@ -63,7 +63,6 @@ window.addEventListener('load', () => {
 					list_el.appendChild(task_el);
 			
 					input.value = '';
-	
 						
 					task_edit_el.addEventListener('click', (e) => {
 						if (task_edit_el.innerText.toLowerCase() == "edit") {
@@ -95,8 +94,12 @@ window.addEventListener('load', () => {
 	task_priority.addEventListener("change", (e)=>{
 		task_priority.classList.add(task_priority.options[task_priority.selectedIndex].text)
 	});
-	function changeBorder(){
-	}
+
+	const date_text = document.querySelector('.date-echeance');
+	date_text.addEventListener('click', function(){
+		this.style.color = 'red' 
+	})
+
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();

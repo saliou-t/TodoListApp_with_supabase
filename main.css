@@ -2,9 +2,10 @@
 	--dark: #374151;
 	--darker: #1F2937;
 	--darkest: #111827;
-	--grey: #6B7280;
+	--ligth: #6B7280;
 	--pink: #EC4899;
 	--purple: #8B5CF6;
+	--primary: rgba(206, 0, 51, 0.92);
 	--light:white;
 }
 
@@ -19,7 +20,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	color: #FFF;
-	background-color: var(--light);
+	background-color: var(--primary);
 }
 
 header {
@@ -32,7 +33,7 @@ header {
 header h1{ 
 	font-size: 2.5rem;
 	font-weight: 300;
-	color: var(--grey);
+	color: var(--light);
 	margin-bottom: 1rem;
 }
 
@@ -49,7 +50,7 @@ input, button {
 
 #new-task-input, .new-task-input-level, .new-task-input-date {
 	flex: 1 1 0%;
-	background-color: var(--darker);
+	background-color: var(--dark);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
@@ -58,7 +59,8 @@ input, button {
 }
 
 #new-task-input::placeholder {
-	color: var(--grey);
+	color: var(--light);
+	opacity: 60%;
 }
 
 #new-task-submit {
@@ -108,7 +110,7 @@ main {
 }
 
 .date-echeance{
-  color: white;
+  color: var(--dark);
   padding: 10px 20px;
   font-style: italic;
 }
@@ -120,7 +122,7 @@ main {
 #tasks .task {
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--darkest);
+	background-color: var(--light);
 	box-shadow: 1px 3px 10px gray;
 	margin-top:22px ;
 	padding: 1rem;
@@ -133,15 +135,17 @@ main {
 }
 
 .task .content .text {
-	color: var(--light);
+	color: var(--dark);
 	font-size: 1.125rem;
+	font-weight: bold;
 	width: 100%;
 	display: block;
 	transition: 0.4s;
 }
 
 .task .content .text:not(:read-only) {
-	color: var(--pink);
+	color: var(--primary);
+	font-weight: normal;
 }
 
 .task .actions {
@@ -175,5 +179,5 @@ main {
 .task .actions .delete {
 	/* color: crimson; */
 	color: red;
-	opacity: 56%;
+	/* opacity: 56%; */
 }
