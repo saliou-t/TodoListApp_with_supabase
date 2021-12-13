@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
 				for(let i=0 ; i<= data.data.length; i++){
 					const task_el = document.createElement('div');
 					task_el.classList.add('task');
+					task_el.classList.add(data.data[i].priority);
 					const task_content_el = document.createElement('div');
 					task_content_el.classList.add('content');
 			
@@ -84,11 +85,21 @@ window.addEventListener('load', () => {
 				}
 			});
 		})();
+	const task_priority = document.getElementById("priority");
+    
+	task_priority.addEventListener("change", (e)=>{
+		task_priority.classList.add(task_priority.options[task_priority.selectedIndex].text)
+	});
+	function changeBorder(){
+	}
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const task = input.value;
 
+        const task_priority_text = task_priority.options[task_priority.selectedIndex].text;
+
+		// alert(task_priority_text)
 		if(task === "") {
 			e.preventDefault()
 			alert('Ajouter une tache svp')
@@ -99,7 +110,8 @@ window.addEventListener('load', () => {
 				.insert([
 				{
 					titre: task,
-					description: 'à la con' 
+					description: 'à la con',
+					priority: task_priority_text 
 				}
 				])
 				.then((data) => {
