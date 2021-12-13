@@ -30,6 +30,11 @@ window.addEventListener('load', () => {
 					task_content_el.classList.add('content');
 			
 					task_el.appendChild(task_content_el);
+					const task_date_el = document.createElement('span');
+					task_date_el.setAttribute('class', 'date-echeance')
+					task_date_el.innerHTML = data.body[i].date_echerence
+
+					task_el.appendChild(task_date_el);
 			
 					const task_input_el = document.createElement('input');
 					task_input_el.classList.add('text');

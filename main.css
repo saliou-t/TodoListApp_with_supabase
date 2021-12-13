@@ -87,13 +87,13 @@ main {
 	margin: 0 auto;
 }
 .faible{
-	border-left: 13px solid blue;
+	border-left: 10px solid blue;
 }
 .moyenne{
-	border-left: 13px solid orange ;
+	border-left: 10px solid orange ;
 }
 .haute{
-	border-left: 13px solid red;
+	border-left: 10px solid red;
 }
 
 .task-list {
@@ -107,6 +107,16 @@ main {
 	margin-bottom: 1rem;
 }
 
+.date-echeance{
+  color: white;
+  padding: 10px 20px;
+  font-style: italic;
+}
+.date-echeance:hover{
+	color: green;
+	text-decoration: line-through;
+    cursor: pointer;
+}
 #tasks .task {
 	display: flex;
 	justify-content: space-between;
